@@ -209,6 +209,12 @@ function renderPositionsTable(positions) {
         table.appendChild(row);
     });
 
+    // Clear previous table if any
+    const existingTable = document.querySelector('table');
+    if (existingTable) {
+        existingTable.remove();
+    }
+
     // Append the table to the body or a specific container
     document.body.appendChild(table);
 }
